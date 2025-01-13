@@ -1,0 +1,22 @@
+{
+  "name": "jogocontroller",
+  "version": "1.0.0",
+  "description": "controlador de jogos de múltiplas plataformas",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev:watch": "npx electronmon --trace-warnings .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clara Fortes",
+  "license": "MIT",
+  "devDependencies": {
+    "better-sqlite3": "^11.7.2",
+    "electron": "^33.3.1",
+    "yup": "^1.6.1"
+  },
+  "dependencies": {
+    "formik": "^2.4.6",
+    "jogocontroller": "file:"
+  }
+}

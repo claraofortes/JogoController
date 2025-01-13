@@ -1,0 +1,10 @@
+NODEJS
+ELECTRON
+YUP
+REACT APP
+FORMIK
+REACT-ROUTER-DOM
+
+-ERRO REACT 19.0
+npm config set legacy-peer-deps true
+   
