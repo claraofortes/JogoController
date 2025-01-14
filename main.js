@@ -4,9 +4,10 @@ const path = require('path');
 
 function createMainWindow(){
     const mainWindow = new BrowserWindow({
-        title:'jogo controller',
-        width: 1000,
-        height:600,
+        title:'Jogo Controller',
+        fullscreen: true,
+        autoHideMenuBar: true,
+        icon: path.join(__dirname, '/app/public/img/icone.png'),
         webPreferences:{
             contextIsolation: true,
             nodeIntegration: true,
