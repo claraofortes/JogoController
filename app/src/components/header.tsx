@@ -73,11 +73,11 @@ export const Header: React.FC = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
             
                 <Nav className="me-auto">
-                    <Nav.Link href="/" className= {homeMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faHouse} /></Nav.Link>
-                    <Nav.Link href="/game" className= {gameMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faGamepad} /></Nav.Link>
-                    <Nav.Link href="/platform" className= {platformMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faDesktop} /></Nav.Link>
-                    <Nav.Link href="/type" className= {typeMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faChartDiagram} /></Nav.Link>
-                    <Nav.Link href="/objective" className= {objectiveMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faCheckToSlot} /></Nav.Link>
+                    <Nav.Link href="/" data-toggle="tooltip" data-placement="bottom" title="Home" className= {homeMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faHouse} /></Nav.Link>
+                    <Nav.Link href="/game" data-toggle="tooltip" data-placement="bottom" title="Jogos" className= {gameMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faGamepad} /></Nav.Link>
+                    <Nav.Link href="/platform" data-toggle="tooltip" data-placement="bottom" title="Plataformas" className= {platformMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faDesktop} /></Nav.Link>
+                    <Nav.Link href="/type" data-toggle="tooltip" data-placement="bottom" title="Gêneros e Tipos" className= {typeMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faChartDiagram} /></Nav.Link>
+                    <Nav.Link href="/objective" data-toggle="tooltip" data-placement="bottom" title="Objetivos" className= {objectiveMenu ? 'select-menu' : ''}><FontAwesomeIcon icon={faCheckToSlot} /></Nav.Link>
                 </Nav>
                 <Nav className = "flex-row">
                     <Nav.Link href="#" onClick={minimizeApp}><FontAwesomeIcon icon={faMinus} /></Nav.Link>
