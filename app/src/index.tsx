@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Header } from './components/header';
 import { Footer } from './components/footer';
 import { Home } from './pages/home';
 import { Game } from './pages/game/index';
@@ -16,7 +18,7 @@ import { Platform} from './pages/platform/index';
 import { PlatformEditor } from './pages/platform/editor';
 import { Type } from './pages/type/index';
 import { TypeEditor } from './pages/type/editor';
-import { Menu } from './components/menu';
+import { Header } from './components/header';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,7 +28,6 @@ root.render(
     {/*<App />*/}
     <BrowserRouter>
       <Header/>
-      <Menu/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/game' element={<Game/>}/>

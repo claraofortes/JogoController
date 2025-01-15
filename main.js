@@ -2,11 +2,13 @@ const {app, BrowserWindow, ipcMain} = require('electron');
 const url = require('url');
 const path = require('path');
 
+let mainWindow; 
 function createMainWindow(){
-    const mainWindow = new BrowserWindow({
+    mainWindow = new BrowserWindow({
         title:'Jogo Controller',
-        fullscreen: true,
         autoHideMenuBar: true,
+        show: false,
+        frame: false,
         icon: path.join(__dirname, '/app/public/img/icone.png'),
         webPreferences:{
             contextIsolation: true,
@@ -14,6 +16,8 @@ function createMainWindow(){
             preload: path.join(__dirname, 'preload.js')
         }
     });
+    mainWindow.maximize();
+    mainWindow.show();
 
     const startUrl = url.format({
         pathname: path.join(__dirname,'./app/build/index.html'),
@@ -25,8 +29,19 @@ function createMainWindow(){
     mainWindow.loadURL('http://localhost:3000/');
 }
 
-app.whenReady().then(createMainWindow);
+ipcMain.on('manualClose', () => {
+    app.quit();
+});
 
-ipcMain.on('submit:todoForm', (event, opts) =>{
-    console.log(opts)
-})
+ipcMain.on('manualMinimize', () => {
+    mainWindow.minimize();
+});
+ipcMain.on('manualMaximize', (e, maximizeToggle) => {
+    if (maximizeToggle) {
+        mainWindow.unmaximize();
+    } else {
+        mainWindow.maximize();
+    }
+});
+
+app.whenReady().then(createMainWindow);
