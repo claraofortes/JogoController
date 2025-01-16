@@ -5,7 +5,6 @@ export const KindEditor: React.FC = () => {
     return (
         <div>
             <p>Kind Editor</p>
-            <Outlet />
         </div>
     );
 }

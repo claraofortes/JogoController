@@ -52,8 +52,15 @@
     ]
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "add": "^2.0.6",
     "ajv": "^7.2.4",
     "bootstrap": "^5.3.3",
-    "react-bootstrap": "^2.10.7"
+    "electron-rebuild": "^3.2.9",
+    "expo-sqlite": "^15.0.6",
+    "package": "^1.0.1",
+    "react-bootstrap": "^2.10.7",
+    "the": "^1.0.2",
+    "to": "^0.2.9"
   }
 }

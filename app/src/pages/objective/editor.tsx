@@ -5,7 +5,6 @@ export const ObjectiveEditor: React.FC = () => {
     return (
         <div>
             <p>Objective Editor</p>
-            <Outlet />
         </div>
     );
 }

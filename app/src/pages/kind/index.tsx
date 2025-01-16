@@ -5,7 +5,6 @@ export const Kind: React.FC = () => {
     return (
         <div>
             <p>Kind</p>
-            <Outlet />
         </div>
     );
 }

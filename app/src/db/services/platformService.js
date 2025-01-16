@@ -1,28 +1,44 @@
-import db from '../indexDB.js';
-//const db = require('better-sqlite3')('../database.db')
 
-export default platform = {
+const indexDB = require('./../indexDB.js');
+
+exports.getAllPlatform = () => {
+    //const db = indexDB.connectDB();
+    const sql = `SELECT * FROM platform`;
+    return 'aqui'
+    //return db.prepare(sql).all();
+}
+/*platform = {
     name: '',
     id: 0,
 }
-export const insertPlatform = (platform) => {
-    const sql = `INSERT INTO platform (name) VALUES (?)`
-    db.prepare(sql).run(platform.name)
-}
-export const updatePlatform = (platform) => {
-    const sql = `UPDATE platform SET name = ? WHERE id = ?`
-    db.prepare(sql).run(platform.name, platform.id)
-}
-export const deletePlatform = (id) => {
-    const sql = `DELETE FROM platform WHERE id = ?`
-    db.prepare(sql).run(id)
-}
-export const getAllPlatform = () => {
-    const sql = `SELECT * FROM platform`
-    return db.prepare(sql).all()
+
+const insertPlatform = (platform) => {
+    const db = connectDB();
+    const sql = `INSERT INTO platform (name) VALUES (@name)`
+    db.prepare(sql).run(platform)
 }
 
-export const getPlatformById = (id) => {
-    const sql = `SELECT * FROM platform WHERE id = ?`
-    return db.prepare(sql).all(id)[0]
+const updatePlatform = (platform) => {
+    const db = connectDB();
+    const {name, id} = platform
+    const sql = `UPDATE platform SET name = @name WHERE id = @id`
+    db.prepare(sql).run({name, id})
 }
+
+const deletePlatform = (id) => {
+    const db = connectDB();
+    const sql = 'DELETE FROM todos WHERE id = @id'
+    db.prepare(sql).run({id})
+}
+
+const getAllPlatform = () => {
+    const db = connectDB();
+    const sql = `SELECT * FROM platform`
+    return db.prepare(sql).all() 
+}
+
+const getPlatformById = (id) => {
+    const db = connectDB();
+    const sql = `SELECT * FROM platform WHERE id = @id`
+    return db.prepare(sql).get({id});
+}*/

@@ -5,7 +5,6 @@ export const Objective: React.FC = () => {
     return (
         <div>
             <p>Objective</p>
-            <Outlet />
         </div>
     );
 }

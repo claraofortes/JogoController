@@ -5,7 +5,6 @@ export const GameEditor: React.FC = () => {
     return (
         <div>
             <p>Game Editor</p>
-            <Outlet />
         </div>
     );
 }
