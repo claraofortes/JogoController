@@ -1,12 +1,19 @@
-
-const indexDB = require('./../indexDB.js');
+const connect = require('./../connect.js');
 
 exports.getAllPlatform = () => {
-    //const db = indexDB.connectDB();
-    const sql = `SELECT * FROM platform`;
+    const db = connect.DB;
+    const sql = 'SELECT * FROM platform'
+    //console.log(db)
+    db.all(sql,[],(err,rows) =>{
+            if(err){
+                console.log(err)
+                return
+            }
+            console.log(rows)
+        })
     return 'aqui'
-    //return db.prepare(sql).all();
 }
+
 /*platform = {
     name: '',
     id: 0,

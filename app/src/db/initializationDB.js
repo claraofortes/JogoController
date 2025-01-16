@@ -75,6 +75,31 @@ const insertPlatforms = () =>{
     });    
 }
 
+/*const sql = `CREATE TABLE IF NOT EXISTS platform(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL)`
+
+DB.run(sql, [], (err)=>{
+    if(err) {
+        console.log('error creating platform')
+        return;
+    }
+    console.log('CREATED TABLE platform')
+});
+
+
+var  data = ["computador", "switch"];
+    const sql = `INSERT INTO platform (name) VALUES (?)`
+    data.forEach(element => {
+        DB.run(sql, element, (err) => {
+            if (err) {
+                console.log('erro to insert '+ element)
+            }
+            console.log('insert ' + element)
+        });
+    });  
+    */
+
 const insertTypes = () =>{
     var  data = ["ação", "aventura", "corrida","luta","simulação"];
     const sql = `INSERT INTO type (name) VALUES (?)`

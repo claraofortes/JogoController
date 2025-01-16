@@ -1,4 +1,4 @@
-import db from '../indexDB';
+import db from '../connect';
 import { kind } from './kindService';
 export var type = {
     name: '',

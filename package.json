@@ -17,7 +17,10 @@
     "yup": "^1.6.1"
   },
   "dependencies": {
+    "expo": "^52.0.25",
+    "expo-sqlite": "~15.0.6",
     "formik": "^2.4.6",
-    "jogocontroller": "file:"
+    "jogocontroller": "file:",
+    "sqlite3": "^5.1.7"
   }
 }
