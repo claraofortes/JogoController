@@ -13,11 +13,3 @@ function connected(err){
 }
 
 exports.DB = new sql3.Database(path.join(__dirname,'/database.db'),sqlite3.OPEN_READWRITE, connected)
-/*
-const sql = 'SELECT * FROM platform'
-    DB.all(sql,[],(err,rows) =>{
-            if(err){
-                console.log(err)
-            }
-            console.log(rows)
-        })*/

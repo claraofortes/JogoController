@@ -2,6 +2,9 @@ const {app, BrowserWindow, ipcMain} = require('electron');
 const url = require('url');
 const path = require('path');
 
+const platformService = require('./app/src/db/services/platformService')
+
+
 let mainWindow; 
 function createMainWindow(){
     mainWindow = new BrowserWindow({
@@ -45,6 +48,10 @@ ipcMain.on('manualMaximize', (e, maximizeToggle) => {
 });
 
 app.whenReady().then(() => {
+    ipcMain.handle('platform:getAll', async () => {
+        return platformService.getAllPlatform();
+    });
+    
     createMainWindow();
     app.on('activate', () => {
         if (mainWindow === null) createMainWindow();

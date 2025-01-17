@@ -53,3 +53,24 @@ footer .footer-container{
   bottom: 5px;
   font-size: small;
 }
+
+.title-page{
+  color: rgb(var(--bs-tertiary-bg-rgb));
+  margin: 20px 0px 10px 50px;
+}
+
+.button-new{
+  float: right;
+  width: 10em;
+  color: #1dd882 !important;
+  border-color: #1dd882 !important;
+}
+
+.button-new:hover{
+  background-color: #1dd882 !important;
+  color: #53595f !important;
+}
+
+.body-page{
+  margin-top: 50px;
+}

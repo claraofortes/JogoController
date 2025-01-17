@@ -12,13 +12,9 @@ contextBridge.exposeInMainWorld('electron',{
 
 contextBridge.exposeInMainWorld('ipcRenderer', {
     send: (channel, data) => ipcRenderer.send(channel, data),
-    on: (channel, func) => ipcRenderer.on(channel, (event, ...args) => func(...args)),
+    on: (channel, func) => ipcRenderer.on(channel, (event, ...args) => func(...args))
 });
 
-const getAllPlatform = () =>{
-    return platformService.getAllPlatform();
-}
-
 contextBridge.exposeInMainWorld('api',{
-    getAllPlatform: getAllPlatform
+    getAllPlatform: () => ipcRenderer.invoke('platform:getAll')
 });

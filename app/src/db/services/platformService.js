@@ -1,23 +1,17 @@
 const connect = require('./../connect.js');
 
-exports.getAllPlatform = () => {
+exports.getAllPlatform = async () => {
     const db = connect.DB;
-    const sql = 'SELECT * FROM platform'
-    //console.log(db)
-    db.all(sql,[],(err,rows) =>{
-            if(err){
-                console.log(err)
-                return
-            }
-            console.log(rows)
-        })
-    return 'aqui'
-}
+    const sql = 'SELECT * FROM platform';
+    return new Promise((resolve, reject) => {
+        db.all(sql,[],(err,rows) =>{
+            if(err) reject(err);
 
-/*platform = {
-    name: '',
-    id: 0,
+            resolve(rows);
+        })
+    })
 }
+/*
 
 const insertPlatform = (platform) => {
     const db = connectDB();
