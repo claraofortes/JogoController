@@ -51,6 +51,10 @@ app.whenReady().then(() => {
     ipcMain.handle('platform:getAll', async () => {
         return platformService.getAllPlatform();
     });
+
+    ipcMain.handle('platform:getById', async (event, ...args) => {
+        return platformService.getPlatformById(args[0]);
+    });
     
     createMainWindow();
     app.on('activate', () => {

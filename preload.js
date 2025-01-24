@@ -16,5 +16,6 @@ contextBridge.exposeInMainWorld('ipcRenderer', {
 });
 
 contextBridge.exposeInMainWorld('api',{
-    getAllPlatform: () => ipcRenderer.invoke('platform:getAll')
+    getAllPlatform: () => ipcRenderer.invoke('platform:getAll'),
+    getPlatformById: (id) => ipcRenderer.invoke('platform:getById',id)
 });

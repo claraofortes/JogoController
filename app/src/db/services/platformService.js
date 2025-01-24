@@ -11,6 +11,17 @@ exports.getAllPlatform = async () => {
         })
     })
 }
+
+exports.getPlatformById = async (id) => {
+    const db = connect.DB;
+    const sql = 'SELECT * FROM platform WHERE id=?';
+    return new Promise((resolve, reject) => {
+        db.all(sql,[id],(err,rows) =>{
+            if(err) reject(err);
+            resolve(rows[0]);
+        })
+    })
+}
 /*
 
 const insertPlatform = (platform) => {
